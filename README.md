@@ -1,9 +1,11 @@
 # Title
 
-# Overview
+## Overview
 blah blah blah
 
-# Setup Required:
+## Solution
+
+#### Prerequisites:
 
 1. Before running codes in this repository, install dependencies using pip:
 
@@ -13,23 +15,34 @@ blah blah blah
 3. Place the 11 raw csv files provided for the challenge (10 feature csv and 1 label csv) in this repository folder
 4. Place the hold-out feature (1 file, named test_features.csv) and label (1 file, named test_labels.csv) files in this repository folder
 
-# Solution
+#### Solution Details and Codes
 
-1. To reproduced data set with engineered features (preprocess.csv, downloaded from XXXXX as specified in Setup Required, point 2), run preprocess_train.py script as follows:
+1. To reproduced data set with engineered features (preprocess.csv, downloaded from XXXXX as specified in Prerequisites, point 2), run preprocess_train.py script as follows:
 
 <pre><code>python train.py</code></pre>
 
 2. Detailed description of the solution provided in solution.ipynb
 
-3. To reproduce the final model file trained on the full data (model_full.h5, downloaded from XXXXX as specified in Setup Required, point 2), run train.py script as follows:
+3. To reproduce the final model file trained on the full data (model_full.h5, downloaded from XXXXX as specified in Prerequisites, point 2), run train.py script as follows:
 
 <pre><code>python train.py</code></pre>
 
-# Evaluation on hold-out set
+##### Evaluation on hold-out set
 
-To perform preprocessing, feature engineering and model inference on the hold-out set (as descrbied in Setup Required, point 4), run test.py script as follows:
+To perform preprocessing, feature engineering and model inference on the hold-out set (setup as described in Prerequisites, point 4), run test.py script as follows:
 
 <pre><code>python test.py</code></pre>
 
+<p>*Outputs*</p>
 <p>prediction.csv: predicted probabilities for each bookingID</p>
-<p>evaluation.txt: recall, precision and f1 score at classification threshold = 0.5; roc-auc and average precision for hold-out set</p> 
+<p>evaluation.txt: recall, precision, f1 score, roc-auc and average precision for hold-out set</p> 
+
+## Built With
+
+Code tested with python 3.5.5 running on Azure Data Science Virtual Machine (Ubuntu 16.04)
+
+## Authors
+
+<p>Lin Laiyi, Senior AI Apprentice at AI Singapore, MSBA 2007/2008</p>
+<p>LinkedIn: https://www.linkedin.com/in/laiyilin/</p>
+<p>Portfolio of selected analytics project: https://drive.google.com/file/d/1fVntFEvj6us_6ERzRmbU85EOeZymFxEm/view</p>
