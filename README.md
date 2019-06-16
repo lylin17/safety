@@ -1,7 +1,11 @@
-# Title
+# Prompt safe driving feedback for Grab drivers
 
-## Overview
-blah blah blah
+- **Overview**: To generate prompt feedback on the driving behavior of Grab drivers at the end of each trip   
+- **Objective**: 
+    1. Build an interpretable predictive model for identification of dangerous driving based on telematics data
+    2. Capture the driving behaviour responsible for each individual trip prediction to provide tailored feedback for safer driving   
+- **Business outcome**: Promote safe driving culture among Grab drivers and reduce customer complaints regarding dangerous driving. Act as a deterrence against dangerous manoeuvres if the drivers know that their driving behaviors are being monitored.    
+- **Value-add**: Currently, Grab provide drivers with weekly feedback of their driving patterns (speed, braking, acceleration etc). This solution could potentially add new features to this feedback report. In addition, prompt feedback (sms or app pop-up) after each trip is proposed. When the trip is still fresh in the driver's mind, such prompt feedback could be more effective than an accumulated report at the end of the week.   
 
 ## Solution
 
@@ -33,9 +37,8 @@ To perform preprocessing, feature engineering and model inference on the hold-ou
 
 <pre><code>python test.py</code></pre>
 
-###### Outputs
-<p>prediction.csv: predicted probabilities for each bookingID</p>
-<p>evaluation.txt: recall, precision, f1 score, roc-auc and average precision for hold-out set</p> 
+- prediction.csv: predicted probability for each bookingID
+- evaluation.txt: recall, precision, f1 score, roc-auc and average precision for hold-out set
 
 ## Built With
 
@@ -44,5 +47,5 @@ Code tested with python 3.5.5 running on Azure Data Science Virtual Machine (Ubu
 ## Author
 
 <p>Lin Laiyi, Senior AI Apprentice at AI Singapore, MSBA 2007/2008</p>
-<p>LinkedIn: https://www.linkedin.com/in/laiyilin/</p>
-<p>Portfolio of selected analytics project: https://drive.google.com/file/d/1fVntFEvj6us_6ERzRmbU85EOeZymFxEm/view</p>
+<p>[LinkedIn](https://www.linkedin.com/in/laiyilin/)</p>
+<p>[Portfolio of selected analytics project](https://drive.google.com/file/d/1fVntFEvj6us_6ERzRmbU85EOeZymFxEm/view)</p>
