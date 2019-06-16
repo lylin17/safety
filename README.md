@@ -42,5 +42,5 @@ Code tested with python 3.5.5 running on Azure Data Science Virtual Machine (Ubu
 ## Author
 
 <p>Lin Laiyi, Senior AI Apprentice at AI Singapore, MSBA 2007/2008</p>
-<p>LinkedIn: https://www.linkedin.com/in/laiyilin/</p>
-<p>Portfolio of selected analytics project: https://drive.google.com/file/d/1fVntFEvj6us_6ERzRmbU85EOeZymFxEm/view</p>
+[LinkedIn](https://www.linkedin.com/in/laiyilin/)
+[Portfolio of selected analytics project](https://drive.google.com/file/d/1fVntFEvj6us_6ERzRmbU85EOeZymFxEm/view)
