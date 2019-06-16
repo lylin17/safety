@@ -1,6 +1,16 @@
-# Title
+# Prompt Feedback for Grab drivers to Encourage Safer Driving
 
-overview
+- **Overview**: To generate prompt feedback on the driving behavior of Grab drivers at the end of each trip   
+- **Objective**: 
+    1. Build an interpretable predictive model for identification of dangerous driving based on telematics data
+    2. Capture the driving behaviour responsible for each individual trip prediction to provide tailored feedback for safer driving   
+- **Business outcome**: Promote safe driving culture among Grab drivers and reduce customer complaints regarding dangerous driving. Act as a deterrent against dangerous manoeuvres if the drivers know that their driving behaviors are being monitored.    
+- **Value-add**: Currently, Grab provide drivers with weekly feedback of their driving patterns (speed, braking, acceleration etc). This solution could potentially add new features to this feedback report. In addition, prompt feedback (sms or app pop-up) after each trip is proposed. When the trip is still fresh in the driver's mind, such prompt feedback could be more effective than an accumulated report at the end of the week.   
+- **Implementation**:
+    - *Inputs*: Telematics data collected from smart phones sensors during the trip
+    - *Outputs*: Concrete textual feedback at the end of the trip on how to make the trip safer using local interpretable model-agnostic explainations (LIME)
+    - *Feature Engineering Choices*: Careful choices were made during feature engineering to ensure that the model is not biased towards features that do not make sense. Such choices were made in the interest of generalizability even if it resulted in some loss in model performance observed for this particular dataset. 
+    - *Model Choice*: Model interpretability was chosen over performance by employing a feature engineering-based approach (capture driving behaviors as features) compared to a black box RNN-type time series classification model  
 
 ## Solution
 
@@ -8,7 +18,7 @@ overview
 
 1. Before running notebooks and scripts in this repository, install dependencies using pip:
 
-<pre><code>pip install requirements.txt</code></pre>
+<pre><code>pip install -r requirements.txt</code></pre>
 
 2. Download preprocess.csv, model.h5 and model_full.h5 from XXXX and put it in this repository folder
 3. Place the 11 raw csv files provided for the challenge (10 feature csv and 1 label csv, keeping their original filenames) in this repository folder
@@ -17,6 +27,8 @@ overview
 #### Solution Details and Scripts
 
 1. Detailed description of the solution provided in solution.ipynb
+	- Notebook outputs data_min.npy, data_range.npy and feat_sel.npy which are used by train.py and test.py
+	- Notebook reproduces model.h5 (downloaded from XXXXX as specified in Prerequisites point 2)
 
 2. To reproduced dataset with engineered features (preprocess.csv, downloaded from XXXXX as specified in Prerequisites point 2), run preprocess_train.py script as follows:
 
@@ -32,7 +44,7 @@ To perform preprocessing, feature engineering and model inference on the hold-ou
 
 <pre><code>python test.py</code></pre>
 
-- prediction.csv: predicted probability for each bookingID
+- prediction.csv: predicted probability for each bookingID in the hold-out set
 - evaluation.txt: recall, precision, f1 score, roc-auc and average precision for hold-out set
 
 ## Built With
