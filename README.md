@@ -1,9 +1,6 @@
 # Prompt Safety Feedback for Grab drivers 
 
-- **Overview**: To generate prompt feedback on the driving behavior of Grab drivers at the end of each trip   
-- **Objective**: 
-    1. Build an interpretable predictive model for identification of dangerous driving based on telematics data
-    2. Capture the driving behaviour responsible for each individual trip prediction to provide tailored feedback for safer driving   
+- **Overview**: To generate prompt feedback on the driving behavior of Grab drivers at the end of each trip    
 - **Business outcome**: Promote safe driving culture among Grab drivers and reduce customer complaints regarding dangerous driving. Act as a deterrent against dangerous manoeuvres if the drivers know that their driving behaviors are being monitored.    
 - **Value-add**: Currently, Grab provide drivers with weekly feedback of their driving patterns (speed, braking, acceleration etc). This solution could potentially add new features to this feedback report. In addition, prompt feedback (sms or app pop-up) after each trip is proposed. When the trip is still fresh in the driver's mind, such prompt feedback could be more effective than an accumulated report at the end of the week.   
 - **Implementation**:
@@ -28,7 +25,7 @@
 
 1. Detailed description of the solution provided in solution.ipynb
 	- Notebook outputs data_min.npy, data_range.npy and feat_sel.npy which are used by train.py and test.py
-	- Notebook reproduces model.h5 (downloaded from XXXXX as specified in Prerequisites point 2)
+	- Notebook reproduces model.h5 (Prerequisites point 2)
 
 2. To reproduced dataset with engineered features (preprocess.csv, Prerequisites point 2), run preprocess_train.py script as follows:
 
