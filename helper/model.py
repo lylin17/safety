@@ -157,7 +157,7 @@ class balanced_generator(Sequence):
            
     def __len__(self):
         #return int(np.ceil(len(self.x) / float(self.batch_size)))
-        return 1
+        return 50
 
     def __getitem__(self, idx):
 
