@@ -7,7 +7,7 @@
     - *Inputs*: Telematics data collected from smart phones sensors during the trip
     - *Outputs*: Concrete textual feedback at the end of the trip on how to make the trip safer using local interpretable model-agnostic explainations (LIME) 
     - *Model Choice*: Model interpretability was chosen over performance by employing a feature engineering-based approach (capture driving behaviors as features) compared to a black box RNN-type time series classification model  
-	- *Feature Engineering Choices*: Careful choices were made during feature engineering to ensure that the model is not biased vy features that do not make sense. Such choices were made in the interest of generalizability even if it resulted in some loss in model performance observed for this particular dataset 
+	- *Feature Engineering Choices*: Careful choices were made during feature engineering to ensure that the model is not biased by features that do not make sense. Such choices were made in the interest of generalizability even if it resulted in some loss in model performance observed for this particular dataset 
 
 ## Solution
 
