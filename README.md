@@ -19,13 +19,13 @@
 
 2. Download preprocess.csv, model.h5, model_full.h5 from https://drive.google.com/drive/folders/1PADzFR8T5pVn0S9kmqB6598e9SHS2EZl?usp=sharing and put it in this repository folder
 3. Place the 11 raw csv files provided for the challenge (10 feature csv and 1 label csv, keeping their original filenames) in this repository folder
-4. Place the hold-out feature file (1 csv file, named test_features.csv) and label file (1 csv file, named test_labels.csv) in this repository folder. Hold-out csv files should have identical columns as the ones provided for the challenge.
+4. Place the hold-out test feature file (1 csv file, named test_features.csv) and test label file (1 csv file, named test_labels.csv) in this repository folder. Hold-out csv files should have identical columns as the ones provided for the challenge.
 
 #### Solution Details and Scripts
 
 1. Detailed description of the solution provided in solution.ipynb
 	- Notebook outputs data_min.npy, data_range.npy and feat_sel.npy which are used by train.py and test.py
-	- Notebook reproduces model.h5 (Prerequisites point 2) 
+	- Notebook reproduces model file trained on train set after train-val split (model.h5, Prerequisites point 2) 
 
 2. To reproduced dataset with engineered features (preprocess.csv, Prerequisites point 2), run preprocess_train.py script as follows:
 
@@ -37,12 +37,12 @@
 
 #### Evaluation on hold-out set
 
-To perform preprocessing, feature engineering and model inference on the hold-out set (setup as described in Prerequisites point 4), run test.py script as follows:
+To perform preprocessing, feature engineering and model inference on the hold-out test set (setup as described in Prerequisites point 4), run test.py script as follows:
 
 <pre><code>python test.py</code></pre>
 
-- prediction.csv: predicted probability for each bookingID in the hold-out set
-- evaluation.txt: recall, precision, f1 score, roc-auc and average precision for hold-out set
+- prediction.csv: predicted probability for each bookingID in the hold-out test set
+- evaluation.txt: recall, precision, f1 score, roc-auc and average precision for hold-out test set
 
 ## Built With
 
