@@ -17,7 +17,7 @@
 
 <pre><code>pip install -r requirements.txt</code></pre>
 
-2. Download preprocess.csv, model.h5 and model_full.h5 from XXXX and put it in this repository folder
+2. Download preprocess.csv from XXXX and put it in this repository folder
 3. Place the 11 raw csv files provided for the challenge (10 feature csv and 1 label csv, keeping their original filenames) in this repository folder
 4. Place the hold-out feature file (1 csv file, named test_features.csv) and label file (1 csv file, named test_labels.csv) in this repository folder. Hold-out csv files should have identical columns as the ones provided for the challenge.
 
@@ -25,13 +25,13 @@
 
 1. Detailed description of the solution provided in solution.ipynb
 	- Notebook outputs data_min.npy, data_range.npy and feat_sel.npy which are used by train.py and test.py
-	- Notebook reproduces model.h5 (Prerequisites point 2)
+	- Notebook reproduces model.h5 
 
 2. To reproduced dataset with engineered features (preprocess.csv, Prerequisites point 2), run preprocess_train.py script as follows:
 
 <pre><code>python preprocess_train.py</code></pre>
 
-3. To reproduce the final model file trained on the full data (model_full.h5, Prerequisites point 2), run train.py script as follows:
+3. To reproduce the final model file trained on the full data, run train.py script as follows:
 
 <pre><code>python train.py</code></pre>
 
